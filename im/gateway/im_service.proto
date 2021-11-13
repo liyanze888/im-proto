@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package im.gateway;
+
+import "im/gateway/message_wrapper.proto";
+
+service ImService {
+  // Connect 链接
+  rpc Connect(stream im.gateway.MessageWrapper) returns (stream im.gateway.MessageWrapper);
+}

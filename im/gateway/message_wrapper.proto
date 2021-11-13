@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package im.gateway;
+
+import "im/message/message_types.proto";
+import "im/gateway/message/connect_message.proto";
+
+message MessageWrapper {
+    im.message.MessageType msgType = 1;
+
+
+    oneof message_comment {
+        im.gateway.message.ConnectMessage connect_message = 10;
+    }
+}

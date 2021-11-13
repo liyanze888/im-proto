@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package im.message;
+
+
+enum MessageType{
+    MessageTypeInvalid = 0;
+    MessageTypeConnect = 1;
+}
