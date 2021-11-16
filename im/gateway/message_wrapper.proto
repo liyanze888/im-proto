@@ -6,10 +6,21 @@ import "im/message/message_types.proto";
 import "im/gateway/message/connect_message.proto";
 
 message MessageWrapper {
+    MessagePayload message = 1;
+}
+
+message MessagePayload {
+    repeated MessageCell items = 1;
+}
+
+
+
+message MessageCell {
     im.message.MessageType msgType = 1;
-
-
+    int64 chat_id = 2;
+    bool show = 3 ;
     oneof message_comment {
         im.gateway.message.ConnectMessage connect_message = 10;
     }
+
 }
