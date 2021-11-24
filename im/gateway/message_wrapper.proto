@@ -7,6 +7,7 @@ import "im/gateway/message/connect_message.proto";
 
 message MessageWrapper {
     repeated MessagePayload payloads = 1;
+    int64 count = 99;
 }
 
 message MessagePayload {
@@ -14,6 +15,7 @@ message MessagePayload {
     int64 chat_id = 2;
     int64 client_id = 3;
     int64 sender = 4;
+    int64 create_time = 5;
     repeated MessageCell items = 30;
 }
 
