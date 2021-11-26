@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package im.server.message.serial;
+
+
+message SaveMessage {
+    bytes content = 1; //保存的信息
+    repeated int64 user_ids = 2; //需要保存该信息的用户
+    int64 chat_id = 3 ;// 会话ID
+}
